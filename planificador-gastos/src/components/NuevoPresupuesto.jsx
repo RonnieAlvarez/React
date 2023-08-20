@@ -15,6 +15,7 @@ const NuevoPresupuesto = ({
 		setMensaje('');
 		setIsValidPresupuesto(true);
 	};
+
 	return (
 		<div className='contenedor-presupuesto contenedor sombra'>
 			<form
@@ -23,11 +24,21 @@ const NuevoPresupuesto = ({
 				<div className='campo'>
 					<label>Definir Presupuesto</label>
 					<input
+						id='inputCantidad'
 						className='nuevo-presupuesto'
 						type='number'
 						placeholder='Añade tu Presupuesto'
 						value={presupuesto}
-						onChange={(e) => setPresupuesto(Number(e.target.value))}
+						onFocus={() => setPresupuesto('')}
+						onChange={(e) => {
+							const inputValor = Number(e.target.value);
+							if (!isNaN(inputValor)) {
+								setPresupuesto(inputValor);
+							} else {
+								setPresupuesto('');
+							}
+						}}
+						// onChange={(e) => setPresupuesto(Number(e.target.value))}
 					/>
 				</div>
 				<input
