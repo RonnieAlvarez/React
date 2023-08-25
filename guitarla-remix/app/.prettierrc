@@ -1,0 +1,6 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "js.format.bracesOnReturn": true,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions":false
+}
