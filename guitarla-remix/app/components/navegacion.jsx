@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { Link, useLocation } from "@remix-run/react";
+import imagen from '../../public/img/carrito.png'
 
 function navegacion() {
   const location = useLocation();
@@ -26,6 +27,10 @@ function navegacion() {
         className={location.pathname === "/guitarras" ? "active" : ""}
       >
         Tienda
+      </Link>
+      <Link
+        to="/carrito">
+        <img src={imagen} alt="Carrito de compras"/>
       </Link>
     </nav>
   );

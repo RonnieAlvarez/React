@@ -1,11 +1,12 @@
 {
   "clientes": [
     {
-      "id": 1,
       "nombre": "Juan",
-      "telefono": 102013313,
+      "empresa": "Codigo Con Juan",
       "email": "juan@juan.com",
-      "empresa": "Codigo Con Juan"
+      "telefono": "102013313",
+      "notas": "notas",
+      "id": 1
     },
     {
       "id": 2,
@@ -26,13 +27,6 @@
       "nombre": "Miguel",
       "telefono": 319381983,
       "email": "miguel@juan.com",
-      "empresa": "Codigo Con Juan"
-    },
-    {
-      "id": 5,
-      "nombre": "Pedro",
-      "telefono": 1398198938,
-      "email": "pedro@juan.com",
       "empresa": "Codigo Con Juan"
     }
   ]
