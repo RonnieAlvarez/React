@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLoaderData } from '@remix-run/react'
+import { useLoaderData,useOutletContext } from '@remix-run/react'
 import { getGuitarra } from "~/models/guitarras.server";
 
 export async function loader({ params }) {
@@ -30,11 +30,25 @@ export function meta({ data }) {
 function Guitarra() {
 // por ser un hook de react solo aqui se puede usar 
 // ya que las otrs funciones son del framwork de Remix
-
+  const {agregarCarrito} = useOutletContext()
   const [cantidad, setCantidad] = useState(0)
-  
   const guitarra = useLoaderData() 
-  const {nombre,descripcion,imagen,precio} = guitarra.data[0].attributes
+  const { nombre, descripcion, imagen, precio } = guitarra.data[0].attributes
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (cantidad < 1) {
+        alert('Debes seleccionar una cantidad')
+    }
+    const guitarraSeleccionada = {
+      id: guitarra.data[0].id,
+      imagen: imagen.data.attributes.url,
+      nombre,
+      precio,
+      cantidad
+    };
+    agregarCarrito(guitarraSeleccionada);
+  }
+
   return (
     <div className="guitarra">
       <img
@@ -46,7 +60,7 @@ function Guitarra() {
         <h3>{nombre}</h3>
         <p className="texto">{descripcion}</p>
         <p className="precio">${precio}</p>
-        <form className="formulario">
+        <form onSubmit={handleSubmit} className="formulario">
           <label htmlFor="cantidad">Cantidad</label>
           <select
             onChange={(e) => setCantidad(parseInt(e.target.value))}
@@ -54,7 +68,7 @@ function Guitarra() {
             // esta forma tambien lo convierte en numero
             id="cantidad"
           >
-            <option value="">-- Seleccion --</option>
+            <option value="0">-- Seleccion --</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
