@@ -16,6 +16,6 @@
 
 ### (React Router-Dom - Vite - TailwindCss - Json Server)
 
-### 5- GuitarLA https://guitarla-remix-strapi.netlify.app/
+### 5- GuitarLA https://guitarla-remix-4uiv.onrender.com/
 
 ### (Remix Strapi )
