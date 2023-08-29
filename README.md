@@ -19,3 +19,7 @@
 ### 5- GuitarLA https://guitarla-remix-4uiv.onrender.com/
 
 ### (Remix Strapi )
+
+### 6- Cotizador Seguros https://app.netlify.com/sites/cotizador-seguros-rac
+### (hooks useState, useContext, useCallback, useMemo, useRef y un hook propio)
+
