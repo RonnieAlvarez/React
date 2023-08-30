@@ -21,5 +21,9 @@
 ### (Remix Strapi )
 
 ### 6- Cotizador Seguros https://app.netlify.com/sites/cotizador-seguros-rac
+
 ### (hooks useState, useContext, useCallback, useMemo, useRef y un hook propio)
 
+### 7- Clima app https://clima-rac.netlify.app/
+
+### React + Vite + Axios (useContext +useState)
