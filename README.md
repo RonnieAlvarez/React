@@ -27,3 +27,7 @@
 ### 7- Clima app https://clima-rac.netlify.app/
 
 ### React + Vite + Axios (useContext +useState)
+
+### 8- Api Noticias https://apinoticias-rac.netlify.app/
+
+### React - Vite + MaterialUI + Axios (useContext +useState)
